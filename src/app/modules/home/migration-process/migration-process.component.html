@@ -1,0 +1,36 @@
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="button_style d-flex flex-row align-items-center justify-content-center">
+        <button class="btn btn-primary button_style" type="button" (click)="startMigrationProcess()">
+            Start
+        </button>
+    </div>
+</div>
+<div class="container-fluid" *ngIf="showMigrationUI">
+    <div class="toggle bg-primary" (click)="toggleArrow()" [ngStyle]="{'bottom': toggleStyle ? '90px' : '0px'}">
+        <span *ngIf="!toggleStyle"> &#9650; </span>
+        <span *ngIf="toggleStyle"> &#9660; </span>
+    </div>
+    <div [ngClass]="toggleStyle ? 'show' : 'hide'" class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-body small">
+            <div class="progress-container">
+                <div class="progress-icon bg-primary">
+                    <img src="assets/images/img-1.png" alt>
+                </div>
+                <div class="arrow">
+                    <i class="fa-solid fa-play text-primary fa-2x"></i>
+                </div>
+                <div class="progress-details" style="margin-left: 15px;">
+                    <span class="progress-label">Migrating Data to selected
+                        environment</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" [style.width.%]="progressValue"></div>
+                    </div>
+                </div>
+                <div class="progress-percentage">
+                    {{ progressValue }}%
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

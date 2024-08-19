@@ -1,0 +1,96 @@
+.container {
+    height: 82vh;
+    position: relative;
+}
+
+.button_style {
+    width: 180px;
+    margin: auto;
+}
+
+.offcanvas {
+    height: auto !important;
+    padding: 0px;
+}
+
+.offcanvas-body {
+    padding: 0px !important;
+}
+
+img {
+    width: 50px;
+    height: 70px;
+}
+
+.arrow {
+    position: absolute;
+    left: 67px;
+}
+
+.toggle {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+
+.progress-icon {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.rocket-icon::before {
+    content: '🚀';
+    font-size: 24px;
+    color: white;
+}
+
+.progress-details {
+    flex-grow: 1;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    border-radius: 3px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    background-color: #007bff;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.progress-percentage {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
